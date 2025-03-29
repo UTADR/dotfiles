@@ -1,0 +1,4 @@
+alias sc='source ~/.bashrc'
+alias ec='${EDITOR:-vim} ~/.bashrc'
+
+alias cls='clear'
