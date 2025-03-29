@@ -2,3 +2,26 @@ alias sc='source ~/.bashrc'
 alias ec='${EDITOR:-vim} ~/.bashrc'
 
 alias cls='clear'
+
+alias si='sed -i'
+alias pie='perl -pi -e'
+
+alias fd='fdfind'
+
+alias cm='chezmoi'
+alias cme='chezmoi edit'
+alias cmap='chezmoi apply -v'
+
+alias rte='rostopic echo'
+alias rtf='rostopic find'
+alias rti='rostopic info'
+alias rtl='rostopic list'
+alias rtt='rostopic type'
+alias rtp='rostopic pub'
+alias rth='rostopic hz'
+
+alias rmi='rosmsg info'
+
+alias rbr='rosbag record'
+alias rbi='rosbag info'
+
