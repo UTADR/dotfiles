@@ -1,6 +1,6 @@
 # Starship prompt config for Jetson Orin (embedded-optimized)
 
-format = """$username$localip$directory$git_branch$git_commit$git_state$git_status$cmd_duration$character"""
+format = """$username$localip$directory$git_branch$cmd_duration$character"""
 
 [localip]
 ssh_only = true
@@ -57,30 +57,30 @@ style = "purple"
 format = "[$branch]($style) "
 
 # 🧱 Git Commit (short hash)
-[git_commit]
-style = "bold yellow"
-only_detached = true
-format = "[$hash]($style) "
-
-# 📍 Git State (rebase/merge etc.)
-[git_state]
-style = "bright-yellow"
-format = '[$state( $progress_current/$progress_total)]($style) '
-
-# 🟡 Git Status (lightweight)
-[git_status]
-style = "dimmed red"
-format = "[$all_status$ahead_behind]($style)"
-conflicted = "⚔️"
-ahead = "↑${count}"
-behind = "↓${count}"
-diverged = "⇕"
-untracked = "?"
-stashed = "📦"
-modified = "!"
-staged = "+"
-renamed = "»"
-deleted = "✘"
+# [git_commit]
+# style = "bold yellow"
+# only_detached = true
+# format = "[$hash]($style) "
+# 
+# # 📍 Git State (rebase/merge etc.)
+# [git_state]
+# style = "bright-yellow"
+# format = '[$state( $progress_current/$progress_total)]($style) '
+# 
+# # 🟡 Git Status (lightweight)
+# [git_status]
+# style = "dimmed red"
+# format = "[$all_status$ahead_behind]($style)"
+# conflicted = "⚔️"
+# ahead = "↑${count}"
+# behind = "↓${count}"
+# diverged = "⇕"
+# untracked = "?"
+# stashed = "📦"
+# modified = "!"
+# staged = "+"
+# renamed = "»"
+# deleted = "✘"
 
 # ⏱ Command duration
 [cmd_duration]
