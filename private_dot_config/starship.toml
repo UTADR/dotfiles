@@ -1,4 +1,95 @@
+# Starship prompt config for Jetson Orin (embedded-optimized)
+
+format = """$username$localip$directory$git_branch$git_commit$git_state$git_status$cmd_duration$character"""
+
 [localip]
-ssh_only = false
-format = '@[$localipv4](bold red) '
+ssh_only = true
+format = '@[$localipv4](bold red)'
 disabled = false
+
+# ⛔ Disable slow or unnecessary modules
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[package]
+disabled = true
+
+[dotnet]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[golang]
+disabled = true
+
+[rust]
+disabled = true
+
+# 👤 User and hostname (only shows if not default)
+[username]
+show_always = false
+style_user = "bold green"
+style_root = "bold red"
+format = '[$user]($style)'
+
+[hostname]
+ssh_only = true
+format = '[$ssh_symbol$hostname]($style):'
+style = "bold dimmed green"
+
+# 📂 Directory (compact)
+[directory]
+format = ':[$path]($style)[$read_only]($read_only_style) '
+truncate_to_repo = false
+style = "blue"
+read_only = " "
+
+# 🔀 Git Branch (fast)
+[git_branch]
+style = "purple"
+format = "[$branch]($style) "
+
+# 🧱 Git Commit (short hash)
+[git_commit]
+style = "bold yellow"
+only_detached = true
+format = "[$hash]($style) "
+
+# 📍 Git State (rebase/merge etc.)
+[git_state]
+style = "bright-yellow"
+format = '[$state( $progress_current/$progress_total)]($style) '
+
+# 🟡 Git Status (lightweight)
+[git_status]
+style = "dimmed red"
+format = "[$all_status$ahead_behind]($style)"
+conflicted = "⚔️"
+ahead = "↑${count}"
+behind = "↓${count}"
+diverged = "⇕"
+untracked = "?"
+stashed = "📦"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+# ⏱ Command duration
+[cmd_duration]
+min_time = 500  # Show if command took > 0.5s
+format = "took [$duration]($style) "
+style = "bold yellow"
+
+# 🎯 Final prompt character
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+
