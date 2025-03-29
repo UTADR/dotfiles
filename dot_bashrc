@@ -122,4 +122,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64:$LD_LIBRARY_PATH
 source /opt/ros/noetic/setup.bash
 export CMAKE_POLICY_VERSION_MINIMUM=3.5
 
+set -o vi
+
 eval "$(starship init bash)"
+
