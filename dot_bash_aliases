@@ -1,5 +1,7 @@
+alias so='source'
 alias sc='source ~/.bashrc'
 alias ec='${EDITOR:-vim} ~/.bashrc'
+alias eh='${EDITOR:-vim} /etc/hosts'
 
 alias cls='clear'
 
