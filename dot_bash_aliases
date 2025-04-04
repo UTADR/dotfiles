@@ -27,3 +27,9 @@ alias rmi='rosmsg info'
 alias rbr='rosbag record'
 alias rbi='rosbag info'
 
+alias rl='roslaunch'
+alias ru='rosrun'
+
+if [ -f ~/.user_aliases ] ; then
+    source ~/.user_aliases
+fi
